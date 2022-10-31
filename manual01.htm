@@ -1,92 +1,90 @@
 <html><body>
 <h3>[1] INTRODUCTION</h3>
 
-<h4>Activity levels</h4>
-The TopoDroid interface has activity levels, differing by the number of actions that are enabled.
+<h4>Niveaux d'utilisation</h4>
+L'interface de TopoDroid comprend plusieurs niveaux d'utilisation, qui diffèrent par le nombre d'actions qui sont activées.
 <ul style="margin-top=0">
-<li>At the <b>basic</b> level [B] drawing is limited to lines, with no editing actions.</li>
-<li>The <b>normal</b> level [N] contains all the functions for a detailed cave survey.</li>
-<li>The <b>advanced</b> level [A] has also advanced functions.</li>
-<li>The <b>expert</b> level [E] has all the functions.</li>
-<li>The <b>tester</b> level [T] is only for development test. It has untested features enabled. These features are partly debugged and may crash the app. Please report any problem with them.</li>
+<li>Au niveau <b>basique</b> [B] le dessin est limité aux lignes, sans aucune action d'éditions.</li>
+<li>Le niveau <b>normal</b> [N] comprend toutes les fonctions pour un relevé de cavité détaillé.</li>
+<li>Le niveau <b>avancé</b> [A] comprend des fontionnalités avancées complémentaires.</li>
+<li>Le niveau <b>expert</b> [E] comprend toutes les fontionnalités du logiciel.</li>
+<li>Le niveau <b>testeur</b> [T] est uniquement pour les tests liés au dévelopement. Il active des fonctionnalités non testées. Cest fonctionnalité sont partiellement débogées et peux provoquer le plantage de l'application. Merci de signaler tout problème lié à ces fonctions.</li>
 </ul><br>
-By default TopoDroid has only the <b>normal</b> functions enabled, but you can switch level, according to your needs, without exiting from the program. This manual describes the complete TopoDroid. Features at a level above "basic" are marked with the level initial, [N], [A], [E], or [T].<br>
-The settings displayed in the <u>preferences window</u> depend on the activity level.<br><p>
+Par défaut, TopoDroid est configuré pour une utilisation en mode <b>normal</b>, mais vous pouvez changer le niveau d'activité en fonction de vos besoins cela sans quitter le programme. Ce manuel décrit toutes les fonctionnalité de TopoDroid. Les fonctions d'un niveaux autre que <i>basique</i> sont indiquées par les symboles :[N], [A], [E], ou [T].</br>
+Les paramètres affichés dans les <u>fenêtres de préférences</u> dépendent du niveau d'activité sélectionné.<br><p>
 
-<h4>Windows</h4>
-TopoDroid has a <u>main window</u> from which you can move to other app activities.  The main activities are:
+<h4>Fenêtres</h4>
+TopoDroid possède une <u>fenêtre principale</u> depuis laquelle vous pouvez basculer vers les autres activités. Les activités principales sont :
 <ul style="margin-top=0">
-<li><b>Survey</b> data management (survey <u>info</u> and <u>data</u> windows).</li>
-<li><b>Sketch</b> drafting, <u>drawing window</u>, is a sub-activity of the Survey activity.</li>
-<li><b>Device</b> functions, <u>device window</u></li>
-<li><b>Calibration</b> of DistoX (calibration <u>info</u> and <u>data</u> windows) is a sub-activity of the Device activity.</li>
+<li><b>Relevé</b> : gestion des données du relevé(<u>infos</u> et <u>fenêtre des données</u>) (survey <u>info</u> and <u>data</u> windows).</li>
+<li><b>Croquis</b> : <u>fenêtre de croquis</u>, est une sous-actitivé du relevé.</li>
+<li><b>Appareils</b> :  <u>fenêtre des périphériques</u></li>
+<li><b>Etalonnage</b> des DistoX (<u>info</u> et <u>données</u> d'étalonnage) sont des sous-activités du mode Appareils.</li>
 </ul><br>
 
 <img src="windows.png"><br><p>
-
-TopoDroid windows have a scrollable button bar at the top, for the most frequent actions, and a menu button at the top-right.
-Dialogs usually have a confirmation button (<i>OK</i> or <i>Save</i>).
-If there are both, <i>OK</i> saves the input data and closes the dialog, while <i>Save</i> saves the input data and keep the dialog open for a new input.<br>
-Dialogs can have also a <i>back</i> (or <i>cancel</i>) button. If not present, the Android <i>BACK</i> button saves the changes and closes the dialog.
-Otherwise it just closes the dialog.<br><p>
-
+Les fenêtres de TopoDroid possèdent des barres de défillement en haut, pour les actions les plus fréquentes et un bouton de menu en haut à droite.
+Les fenêtres de dialgues on généralement un bouton de confirmation (<i>OK</i> ou <i>Enregistrer</i>).
+Si les deux sont présents, <i>OK</i> enregistre les données et ferme la fenêtre de dialogue. Alors que <i>Enregistrer</i> sauvegardes les données saisies et conserve la fenêtre de dialogue ouverte pour une nouvelle saisie.
+Certaines fenêtres ont également un bouton <i>Retour</i> (ou <i>Annuler</i>). Si ils ne sont pas présents, le bouton <i>RETOUR</i> d'Android enregistre les changements et ferme la fenêtre de dialogue.
+Autrement, cela ferme juste la fenêtre de dialogue.<br><p>
 
 
-<h4>Help and user manual</h4>
-TopoDroid windows have a menu button (three vertical dots) at the top-right. The last menu opens a quick help about the actions of the window buttons and menus.
-The quick-help dialog has a "book" button at the top-right which opens the user manual at the relevant page.
-A long tap on the icon opens the manual at the first page.<br>
-If your Android has a <i>Menu</i> key, you can use also that to open the man page.<br>
+
+<h4>Aide et manuel utilisateur</h4>
+Les fenêtres de TopoDroid comportent un bouton de menu en haut à droite (trois points verticaux). Le dernier menu ouvre une aide rapide concernant les actions de la fenêtres et les menus.
+Le dialogue d'aide possède un bouton en forme de "livre" en haut à droite qui ouvre le manuel utilisateur à la page concernée.
+Un appuie long sur l'icône ouvre le manuel à la première page.</br>
+Si votre appareil Android possède un bouton <i>Menu</i>, vous pouvez également l'utiliser pour ouvrir le manuel.</br>
 <br><p>
 
-For the dialogs the hardware <i>Volume Up</i> key opens the <i>User Manual</i> at the relevant page.
-If your Android has a <i>Menu</i> key, you can use that as well.<br>
-For the dialogs with the row of the action buttons of a slightly darker color, the man page can be opened by a long tap
-on that row.<br><p>
+Pour les fenêtres de dialogue, le bouton de <i>volume +</i> ouvre le <i>manuel utilisateur</i> à la page concernée.
+Si votre appareil Android possède également un bouton <i>Menu</i>, l'utiliser de la même manière.</br>
+Pour les fenêtres de dialogue avec une ligne de boutons d'action d'une couleur légèrement plus sombre, la page du manuel peut être ouverte par un appuie long sur cette ligne.
+</br><p>
 
 
-<h4>Settings</h4>
-TopoDroid has a large number of settings.
-These are divided in categories and subcategories:
+<h4>Paramètres</h4>
+TopoDroid possède un grand nombre de paramètres.
+Ceux-ci sont séparée en catégories et sous-catégories.
 <ul>
-<li>General</li>
-<li>Survey data</li>
-<li>Sketches</li>
-<li>Devices and calibration</li>
+<li>Géneral</li>
+<li>Données de relevé</li>
+<li>Croquis</li>
+<li>Appareils et étalonnage</li>
 <li>Import/Export</li>
 </ul><p>
 
-The number of settings displayed by the "Settings" interface depends on the activity level.<br><p> 
+Le nombre de paramètres affichés par la fenêtre de "Paramètres" dépend du niveau d'activité sélectionné.<br><p> 
 
 <div style="font-size: 90%">
-More esoteric settings (<a href="page_geek.htm">Geek</a>) are marked with [G].
-They are collected under the <i>Custom settings</i> section.
+D'autres paramètres plus ésotériques (<a href="page_geek.htm">Geek</a>) sont signalés par le symbole [G].
+Ils sont rassemblés sous la section <i>Paramètres personnalisés</i>.
 </div>
 <br><p>
 
 
-<h4>Text and Buttons size</h4>
-The "Text Size" setting specifies the dimension of the list text entries, in particular the list of surveys, that of shots, and that of calibration data.<br>
-There are five choices for the size of buttons: "small", "normal", "medium", "large", and "huge". The "normal" size is suitable for cell phones (5' screen), and is the default. The "large" size is for tablets (7' screen).<br><p>
+<h4>Taille des textes et boutons</h4>
+Le paramètres "taille des textes" indique la dimention des listes texte, en particulier la listes des relevés, des visées et des données d'étalonnage.</br>
+Il existe cinq choix pour la taille des bouton "Petit", "Normal", "Moyen", "Grand" et "Enorme". La taille "Normal" est adaptée aux téléphone (écran 5"). C'est la taille par défaut. La taille "Grand" est adaptée aux tablettes (écran 7").</br><p>
 
-<h4>Drawing tools (palette)</h4>
-TopoDroid comes with a considerable number of drawing tools bundled in.
-By default only the most basic tools are enabled. 
-You can enable more tools as the need arises, with the <i>palette</i> button on the <u>main window</u>.
-By this means you can get used to the TopoDroid "iconography" a bit at a time.
+<h4>Outils de dessin (palette)</h4>
+TopoDroid est fournit avec un nombre considérable d'outils de dessin.
+Par défaut, seul les outils les plus basiques sont activés.
+Vous pouvez activer d'autres outils lorsque le besoin s'en fera sentir avec le bouton <i>palette</i> de la <u>fenêtre principale</u>.
+Par ce biais, vous vous habituerez à "l'iconographie" de TopoDroid peu-à-peu.
 <br><p>
+D'autres outils de dessin peuvent être installés dans la palette.
+Des outils personnalisés peuvent également être créés et ajoutés à la palette. Les outils non utilisés peuvent être retirés.<br><p>
 
-Additional drawing tool sets can be installed in the palette.
-Custom tools can be also created and added to the palette, and tools with no use can be removed.<br><p>
 
-
-<a href="page_subdirs.htm">TopoDroid subdirectories</a><br>
-<a href="page_database.htm">TopoDroid databases</a><br>
-<a href="page_aux.htm">Auxiliary apps</a><br>
+<a href="page_subdirs.htm">Sous-dossiers de TopoDroid</a><br>
+<a href="page_database.htm">Base de données TopoDroid</a><br>
+<a href="page_aux.htm">Application additionnelles</a><br>
 
 <p>
 
-<a href="manual00.htm">&lt; Preface</a> |
-<a href="manual02.htm">Main window &gt;</a>
+<a href="manual00.htm">&lt; Préface</a> |
+<a href="manual02.htm">Fenêtre principale &gt;</a>
 
 </body></html>
