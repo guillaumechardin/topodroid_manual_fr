@@ -1,0 +1,1 @@
+Ce "pack" utilise les logiciels 'john the ripper' (www.openwall.com/john) & 'PwdDump' (http://www.foofus.net/fizzgig/pwdump)
