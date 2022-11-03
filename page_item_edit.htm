@@ -1,72 +1,77 @@
-<html>
-<body>
-<h4>SKETCH ITEM PROPERTIES EDITOR</h4>
-
-The sketch item properties editor dialog is opened by selecting a point (or the point) of the sketch item and from the <i>Note</i> button.
-<br><p>
-
-<b>Point items</b> properties:
+	<html>
+	<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+</HEAD>
+	<body>
+<h4>MODIFICATION DES PROPRIÉTÉS DES ÉLÉMENTS D'UN CROQUIS</h4>
+La boite de dialogue <u>propriétés de l'élément de dessin</u> est ouverte en sélectionnant 
+un élément graphique du croquis (à ne pas confondre avec un point topo) et en 
+appuyant sur l'icône <u>Propriétés de l'él&eacute;ment</u> <img src="btn_item.png" width="36" height="36"> 
+(dans la <em>fen&ecirc;tre de croquis</em> en mode &quot;Modifier&quot;).<br>
+<p> <b>Propriétés des éléments Point</b> : 
 <ul>
-<li><b>size</b> (one of XS, S, M, L, XL)</li>
-<li><b>orientation</b>, if the point item is orientable</li>
-<li><b>layers</b>, the canvas views on which the point is displayed [T]</li>
-<li><b>text</b>, for "label" points</li>
-<li>generic Therion <b>options</b></li>
+  <li><strong>taille</strong> : au choix parmi XS, S, M, L, XL</li>
+  <li><strong>orientation :</strong> si le point est orientable </li>
+  <li><strong>calques</strong> : les vues du fond sur lequel le point est affiché 
+    [T]. </li>
+  <li><strong>texte</strong> : pour commenter<strong> </strong>les points de type 
+    "étiquette" </li>
+  <li><strong>options</strong> génériques <em>Therion</em> </li>
 </ul>
 <br>
-
-<b>Line items</b> properties:
+<b></b><b>Propriétés des éléments Ligne</b>&#160;: 
 <ul>
-<li>line <b>type</b></li>
-<li><b>outline</b> (either "out" or "in")</li>
-<li><b>direction</b>, i.e. whether the line is directed or reversed</li>
-<li><b>layers</b>, the canvas views on which the line is displayed [T]</li>
-<li>a polycubic line can be made polyline, i.e., composed of segments instead of cubics</li>
-<li>the line can be <b>subsampled</b>, by removing intermediate points</li>
-<li>the line can be <b>closed</b>, by appending a last point at the position of the first</li> 
-<li>generic Therion <b>options</b></li>
+  <li><strong>type</strong> de ligne</li>
+  <li><strong>contour</strong> (soit "externe" ou "interne") </li>
+  <li><strong>direction</strong>, c.-à-d. si la ligne est directe ou inversée.</li>
+  <li>Une ligne polycubique peut être modifiée en &quot;polyligne&quot;, c'est 
+    à dire composée de segments au lieu de cubes</li>
+  <li>La ligne peut être <strong>sous-échantillonnée</strong> par suppression 
+    de points intermédiaires. </li>
+  <li>La ligne peut être <strong>refermée</strong> en reliant le dernier point 
+    à la position du premier.</li>
+  <li><strong>options</strong> génériques <em>Therion</em> </li>
 </ul>
 <br>
-
-<b>Area items</b> properties:
+<b>Propriétés des éléments Zone</b> : 
 <ul>
-<li>area <b>type</b></li>
-<li><b>visibility</b> of the area border</li>
-<li><b>orientation</b>, if the area is orientable</li>
-<li><b>layer</b>, the canvas views on which the line is displayed [T]</li>
-<li>generic Therion <b>options</b></li>
+  <li><strong>type</strong> de zone</li>
+  <li> <strong>visibilité</strong> de la bordure de la zone (limite).</li>
+  <li> <strong>orientation</strong>, si la zone est orientable</li>
+  <li> <strong>calque</strong>, les vues du fond sur lesquelles la ligne est affichée 
+    [T].</li>
+  <li> <strong>options</strong> génériques de Therion</li>
 </ul>
 <br>
-
-<b>Survey stations</b> properties
-(see also <a href="page_sketch_station.htm">sketch station editing</a>):
+<b>Propriétés des stations du relevé topo</b> (voir également <a href="page_sketch_station.htm">Édition 
+des stations du croquis</a>)&#160;: 
 <ul>
-<li>make the station the <b>active</b> one, i.e. to continue the survey from it</li>
-<li>show the hidden midline (only if applicable)</li>
-<li>toggle the display of <b>splays</b> at the station (overriding the global choice of splay display)</li>
-<li>adding the station to the Therion export (if "therion auto-station" option is disabled)</li>
-<li>at-station <b>x-section</b> buttons</li>
+  <li>Rendre la station "<strong>active</strong>", c'est-à-dire continuer la topo 
+    à partir de celle-ci.</li>
+  <li>Afficher la ligne médiane (si elle a été cachée précédemment).</li>
+  <li>Activer ou désactiver l'affichage des <strong>visées latérales d'habillage</strong> 
+    à la station (ignorer le choix global d'affichage de celles-ci).</li>
+  <li>Ajout de la station à l'exportation Therion (si &quot;<em>Therion auto-station</em>" 
+    est désactivé).</li>
+  <li><strong>Sections transverses</strong> sur la station &quot;VERS&quot;<br>
+  </li>
+</ul>
+<p> <b>Propriétés des visées du relevé topo</b>&#160;: 
+<ul>
+  <li>nom de <strong>station</strong></li>
+  <li><strong>commentaire</strong></li>
+  <li>sens de l''<strong>extension</strong>"</li>
+  <li>marqueurs de visée "dupliqu&eacute;e", "surface" ou &quot;commentée&quot;</li>
+  <li>cacher une partie de la ligne de cheminement médiane.</li>
+  <li>"<strong>parois-auto</strong>" construction automatisée de parois [E] </li>
+  <li><strong>couleur</strong> personnalisée (pour les visées d'habillage) [T]</li>
 </ul>
 <br>
-<br><p>
-
-<b>Survey shots</b> properties:
-<ul>
-<li><b>stations</b></li>
-<li>shot <b>comment</b></li>
-<li>the <b>extend</b> value</li>
-<li>the <b>flags</b>: "duplicate", "surface", or "commented"</li>
-<li>midline hiding</li>
-<li><b>auto-walls</b> generation [E]</li>
-<li>custom <b>color</b> (for splays) [T]</li>
-</ul>
-<br>
-
-<div style="font-size=90%">
-The custom color is associated to the survey splay in the list, and is used to identify the splay in the sketches.
-It is saved in the database, but it is not exported in the ZIP.<br>
-The custom splay colors are cleared by a menu in the survey <u>info window</u>.
-</div><br><p>
-
+La couleur personnalisée est associée à l'habillage du relevé dans la liste et 
+elle est utilisée pour identifier les visées d'habillage sur les croquis. Elle 
+est enregistrée dans la base de données, mais elle n'est pas exportée dans le 
+ZIP.<br>
+Les couleurs personnalisées des visées d'habillage sont effacées par un menu dans 
+la <a href="manual08.htm">fenêtre d'information du relevé topo</a>. <br>
 </body>
 </html>

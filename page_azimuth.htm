@@ -1,58 +1,71 @@
-<html><body>
+<html>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+</HEAD>
+<body>
+<h4>RÉFÉRENCE D'EXTENSION DE DIRECTION</h4>
 
-<h4>EXTEND REFERENCE</h4>
-
-This dialog is opened from the <u>Azimuth</u> button either in the survey <u>data window</u>
-or in the <u>sketch window</u>.<br><p>
-
-The extend reference is used to assign the profile "extend" direction to the midline legs.<br>
-The "extend" direction is not automatically set for the splays.<br><p>
-
-The <i>Azimuth</i> button displays either a long arrow inside a circle, oriented to the 
-current extend reference direction, or a short arrow directed left or right (for fixed "extend").<br>
-When the profile "extend" is compute using the "extend reference" it is set to right if it differs from the
-reference by less than 90&deg;. Otherwise it is set to left.
-<br><p>
-
-When the <i>Fixed extend reference</i> setting is enabled, the <i>Azimuth</i> button has only two states, either LEFT or RIGHT.
-Tapping the button switches between them. The new shots extend is set according to the state
-of the button.<br><p>
-
-This dialog has
+<p>Cette boîte de dialogue s'ouvre en appuyant sur le bouton <em>Azimut</em> <img src="btn_azimut.png"> 
+  soit dans la fenêtre de <u>données du relevé topographique</u> soit dans<i> 
+  </i><u>la fenêtre de croquis</u>.</p>
+<p>La référence d'extension est utilisée pour affecter un profil de &quot;direction 
+  étendue&quot; à la ligne de cheminement médiane afin de tracer correctement 
+  la coupe développée. </p>
+<p> Le bouton <em>Azimut</em> affiche soit une longue flèche à l'intérieur d'un 
+  cercle, orientée dans la direction actuelle, soit une petite flèche dirigée 
+  vers la gauche ou la droite (pour une &quot;extension&quot; fixe).<br>
+  Lorsque le profil de &quot;direction&quot; est calculé en utilisant la &quot;référence 
+  d'extension&quot;, il est tourné vers la droite s'il diffère de la référence 
+  de moins de 90 degrés. Sinon, il est dirigé vers la gauche. </p>
+<p> Lorsque le paramètre <em>Référence d'extension</em> fixe est défini, le bouton 
+  n'a que deux états, GAUCHE ou DROITE. Appuyer sur le bouton le fait basculer 
+  entre les deux états. Les nouvelles directions des visées sont attribuées en 
+  fonction de l'état du bouton.</p>
+<p>Cette boite de dialogue contient : 
 <ul>
-<li>"extend reference" <b>azimuth</b></li>
-<li>slider to change its value between -180 and 180&deg;</li>
-<li><b>text field</b> to enter the azimuth numerical value, between 0 and 360</li>
-<li><b>compass</b> sets the value using the Android magnetic sensors</li>
-<li><b>left</b> forces "extend" to LEFT (-1)</li>
-<li><b>right</b> forces "extend" to RIGHT (+1)</li>
-<li><b>ok</b>: use the azimuth for the "extend"</li>
+  <li><b>Azimut</b> : icône de référence<b> </b>d'&quot;extension" </li>
+  <li><b>Curseur</b> : modifier sa valeur entre -180 et 180 degrés </li>
+  <li><b>Champ de texte</b> : saisir la valeur numérique de l'azimut, entre 0 
+    et 360°</li>
+  <li><b>Boussole</b> :<b> </b> définir la valeur en utilisant les capteurs magnétiques 
+    Android </li>
+  <li><b>GAUCHE</b> : forcer l'&quot;extension" à gauche (-1) </li>
+  <li><b>OK</b>&#160;: utiliser l'azimut pour l'&quot;extension&quot; </li>
+  <li><b>DROITE</b> : forcer l'"extension" à droite (&#160;+1) </li>
 </ul>
-<br><p>
+<p>&nbsp;</p>
+<p><strong>Mode de référence d'extension du croquis</strong><br>
+  L'azimut de référence étendu peut également être modifié dans la vue en plan 
+  d'un croquis [E]. Une longue pression sur le bouton Azimut fait passer la fenêtre 
+  en mode &quot;référence extension&quot;. Dans ce mode, un glissement du doigt 
+  sur l'écran fait tourner l'azimut de référence (le fond n'est pas déplacé). 
+  Pour sortir de ce mode, il faut retirer le doigt de l'écran. <br>
+</p>
+<p> <b>Direction (d'extension) des visées de cheminement</b><br>
+  Lorsqu'une nouvelle visée est téléchargée TopoDroid définit automatiquement 
+  sa "direction". Il en est de même pour les visées saisies manuellement, sans 
+  spécifier de &quot;direction&quot; dans la boîte de dialogue des visées. Par 
+  défaut, la "direction" est soit &quot;DROITE&quot;, soit &quot;GAUCHE&quot;, 
+  soit &quot;VERT&quot; (pour verticale), selon l'angle que la visée fait avec 
+  un azimut de référence. <br>
+  Si l'angle est inférieur à 90° moins le <em>seuil vertical d'extension </em>, 
+  la visée de cheminement est étendue à DROITE. S'il est supérieur à 90° plus 
+  le <em>seuil vertical d'extension</em>, la visée de cheminement est étendue 
+  à GAUCHE. Sinon, elle est étendue VERT(icalement).
+<p align="justify"> La boîte de dialogue &quot;<em>Référence d'extension</em>&quot; 
+  permet de modifier l'azimut de référence, en le tournant dans le sens horaire 
+  ou antihoraire. L'azimut de référence peut également être réglé en utilisant 
+  les capteurs de la boussole Android. Un avertissement est affiché si la précision 
+  du capteur est faible ou s'il y a une défaillance du capteur. 
+<p> Il est également possible de fixer l'"extension" pour les prochaines visées 
+  soit à gauche soit à droite, en sélectionnant le bouton approprié dans la boîte 
+  de dialogue. <br>
 
-<b>Sketch extend reference mode</b><br>
-The extend reference azimuth can be changed also in the plan view of a sketch [E].
-A long tap on the <i>Azimuth</i> button turns the window in "extend reference" mode. In this mode an
-finger slide across the display rotates the reference azimuth (the canvas is not shifted).
-To get out of this mode lift the finger from the screen.<br><p>
-
-<b>Leg extend</b><br>
-When a new shot is downloaded TopoDroid sets its "extend" automatically.
-This holds also for shots entered manually, if the "extend" in the shot dialog is left "unset".
-By default the "extend" is either LEFT, RIGHT, or VERT (vertical), depending on the angle the shot makes with the reference azimuth.<br>
-If the angle is smaller than 90&deg; minus the <i>extend vertical threshold</i> the leg is extended RIGHT.
-If it is larger than 90&deg; plus the <i>extend vertical threshold</i> the leg is extended LEFT.
-Otherwise it is extended VERT.<br><p>
-
-The <i>Extend Reference</i> dialog allows to change the reference azimuth, by rotating it clockwise or counterclockwise.
-Alternatively, the reference azimuth can be set using the Android compass sensors.
-A warning is shown if the sensor accuracy is low or there is a sensor failure.
-<br><p>
-
-It is also possible to fix the "extend" for coming shots to either LEFT or RIGHT, by selecting the appropriate buttons in the dialog.<br><p>
-
-<b>Splay extend</b><br>
-The "extend" of splay shots is determined according to that of the legs at the splay station and the azimuth between the splay and the legs.
-The splay is extended as if it were projected on the closest of the vertical planes passing through the legs.<br><p>
+<p><b>Direction (d'extension) des visées latérales d'habillage </b><br>
+  La &quot;direction&quot; des visées latérales à une station donnée est déterminée 
+  en fonction de celle du cheminement et de l'azimut entre l'habillage et le cheminement. 
+  La visée latérale d'habillage<b> </b>est étendue comme si ellel était projetée 
+  sur le plus proche des plans verticaux passant par les visées de cheminement.
+<p>
 
 </body></html>

@@ -1,76 +1,93 @@
-<html><body>
+<html>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+</HEAD>
+<body>
+<h4>Stratégies et conventions de dénomination automatique des stations</h4>
 
-<h4>STATION NAMING POLICIES</h4>
-
-When you download data TopoDroid can automatically assign them station names. A repeated measurement is considered a leg shot, the others are splay shots.  If you stick to a convention taking measurements TopoDroid automatic station naming can be very handy. TopoDroid supports a number of conventions to automatically assign stations to shots. You can select the one that fits your habits through the settings.
+<p>Lorsque vous téléchargez des données, TopoDroid peut automatiquement attribuer 
+  des noms aux stations. Une mesure répétée est considérée comme une visée de 
+  cheminement, les autres sont des visées latérales d'habillement. Si vous vous 
+  en tenez à une convention en prenant vos mesures, la stratégie d'affectation 
+  automatique des noms de station de TopoDroid peut être très pratique. TopoDroid 
+  prend en charge un certain nombre de conventions pour attribuer automatiquement 
+  des appellations de stations aux différentes visées. Vous pouvez sélectionner 
+  celui qui correspond à vos habitudes grâce aux paramètres. </p>
 <ol>
-<li><b>splays+foreshot</b>. At the FROM station: you take splays first and then forward leg shots. This is the default convention.</li>
-<li><b>splays+backshot</b>. At the TO station: you take splays first and then backward leg shots</li>
-<li><b>backsight</b></li>
-<li><b>tripod</b> [A]</li>
-<li><b>magnetic anomaly</b> compensation [E]</li>
-<li><b>foreshot+splays</b>. At the FROM station: you take the forward leg shots first, and then the splays</li>
-<li><b>backshot+splays</b>. At the TO station: you take backward leg shots first and then splays</li>
-<li><b>TopoRobot</b> [T]</li>
-</ol><br><p>
-
-Examples of the conventions (shots taken at the same station are grouped in parenthesis):
-<ol>
-<li> ... (1-. 1-. 1-. 1-2) (2-. 2-. 2-3) ... </li>
-<li> ... (2-. 2-. 2-. 2-1) (3-. 3-. 3-2) ... </li>
-<li> ... (2-1 2-. 2-. 2-3) (3-2 3-. 3-. 3-4) ... </li>
-<li> ... (2-1 2-. 2-. 2-3) (4-3 4-. 4-. 4-5) ... </li>
-<li> ... (2-1 2-. 2-. 2-3) (3-2 3-. 3-. 3-4) ... (same as "3")</li>
-<li> ... (1-2 1-. 1-. 1-.) (2-3 2-. 2-.) ... </li>
-<li> ... (2-1 2-. 2-. 2-.) (3-2 3-. 3-.) ... </li>
-<li> ... (1-. 1-. 1-. 1-2) (2-. 2-. 2-3) ... (same as "1")</li>
-</ol><br>
-
-Sequence a-b-c-d for the first (foreshot) and the second (backshot) policies.<br>
-<img src="survey_policy.png">
-<br><p>
-
-Each time the automatic station assignment is carried out, it starts from the last leg
-(or second to last for the <i>backsight</i> and <i>tripod</i> policies).
-If the survey has yet no leg, it starts from the first shot. 
-Therefore shots before the last leg are not modified, while stations are 
-assigned to all the shots following the last leg.
-This may affect the station of splays immediately following the last leg, when the station-assignment
-policy is changed.<br><p>
-
-<b>Backsight</b> policy<br>
-At each station you take the backshot to the previous station, next the splay shots, and finally the forward shot to the next station.<br>
-Backsight shots are checked: if a shot is not close to the opposite of the previous leg, it is not considered a backsight shot.<br>
-The backsight shots are marked "duplicate".<br><p>
-
-<b>Tripod</b> policy<br>
-At station "1" you take splays and then shots to the station "2". Then you move into station "3", take shots to station "2", then splays, then shots
-to station "4". Move to station "5" and so on.<br><p>
-
-<b>Magnetic anomaly compensation</b> [Tester level]<br>
-The magnetic anomaly compensation is done estimating at each station the
-"local" magnetic declination by comparing the azimuths of the leg reaching to the station and the backsight leg. The azimuth of all the shots at the station are then corrected with the "local" declination. An overall declination remains because the declination at the first station cannot be determined. Furthermore the survey azimuth angles become relative as in a traverse, therefore the angle errors add up instead of compensating.<br>
-The magnetic anomaly compensation requires taking backsight shots. However, with magnetic anomaly compensation the check whether a shot is a backsight does not take the azimuth into account. The magnetic anomaly compensation is carried out during the data reduction (for the sketches).<br><p>
-
-<b>TopoRobot</b> policy<br>
-The "TopoRobot" policy is just like the first, but station names follow the TopoRobot convention.<br><p>
-
-<b>Station naming policy and activity levels</b><br>
-Certain station naming policy are disabled at high activity levels:
+  <li><strong>habillage + cheminement</strong> : à la station &quot;DEPUIS&quot; 
+    vous prenez d'abord des &quot;visées latérales d'habillage&quot; et ensuite 
+    une ou des &quot;visée(s) de cheminement&quot; vers l'avant. C'est la convention 
+    par défaut.</li>
+  <li><strong>habillage + inverse</strong> : à la station &quot;VERS&quot; vous 
+    prenez d'abord des &quot;visées latérales d'habillage&quot; puis une ou des 
+    &quot;visée(s) de cheminement&quot; inverse(s).</li>
+  <li>visées<strong> inverses</strong> (vers l'arrière)</li>
+  <li>visées au <strong>trépied</strong> [A]</li>
+  <li>compensation d'<strong>anomalie magnétique</strong> [E]</li>
+  <li><strong>cheminement + habillage</strong> : à la station &quot;DEPUIS&quot; 
+    vous prenez d'abord une ou des &quot;visée(s) de cheminement&quot; vers l'avant, 
+    puis des &quot;visées latérales d'habillage&quot;.</li>
+  <li><strong>inverse + habillage</strong> : à la station &quot;VERS&quot; vous 
+    prenez d'abord une ou des &quot;visée(s) de cheminement&quot; inverse(s), 
+    puis des &quot;visées latérales d'habillage&quot;.</li>
+  <li><strong>TopoRobot</strong> [T] </li>
+</ol>
+<p> Voici des exemples de conventions (les visées faites à une même station sont 
+  regroupées entre parenthèses): </p>
 <ul>
-<li>"Tripod" requires "advanced" level</li>
-<li>"Magnetic anomaly" requires "expert" level</li>
-<li>"TopoRobot" requires "tester" level</li>
-</ul><br>
-Reducing the activity level when one of these is active, automatically set the station policy to the default policy (splays + foreshot).
-The policy is automatically reinstated again if the activity level is raised to the required value or above.<br><p>
-
-<b>Blunder leg-shot</b> [T]<br>
-A <i>blunder shot</i> is an intermediate leg shot that happened to be off-target.
-Typical leg sequences with blunders 'B' are "A-B-A-A" and "A-A-B-A".<br>
-Blunder leg-shot detection is an experimental feature of the <i>default station naming policy</i>.
-It must be enabled with a custom setting.<br>
-Blunder shots are detected and marked as blank entry that will be hidden when the list is refreshed.<br>
-Blunder shots can be recovered.<br><p>
-
+  <li>... (1-. 1-. 1-. 1-2) (2-. 2-. 2-3) ... </li>
+  <li> ... (2-. 2-. 2-. 2-1) (3-. 3-. 3-2) ... </li>
+  <li> ... (2-1 2-. 2-. 2-3) (3-2 3-. 3-. 3-4) ... </li>
+  <li> ... (2-1 2-. 2-. 2-3) (4-3 4-. 4-. 4-5) ... </li>
+  <li> ... (2-1 2-. 2-. 2-3) (3-2 3-. 3-. 3-4) ... (idem à"3")</li>
+  <li> ... (1-2 1-. 1-. 1-.) (2-3 2-. 2-.) ... </li>
+  <li> ... (2-1 2-. 2-. 2-.) (3-2 3-. 3-.) ... </li>
+  <li> ... (1-. 1-. 1-. 1-2) (2-. 2-. 2-3) ... (idem à "1")</li>
+</ul>
+<p><br>
+  S&eacute;quence a-b-c-d représentée selon la première stratégie (visée vers 
+  l'avant) et la troisi&egrave;me stratégie (vis&eacute;e inverse).</p>
+<p><br>
+  <img src="survey_policy.png" width="320" height="240"> <br>
+</p>
+<p align="justify">Chaque fois que l'affectation automatique des stations est 
+  effectuée, elle commence à partir de la dernière visée de cheminement (ou de 
+  l'avant-dernier pour les politiques de visée arrière et de trépied). Si le relevé 
+  n'a pas encore de visée de cheminement, elle commence à partir de la première 
+  visée. Par conséquent, les visées précédant le dernier point de cheminement 
+  ne sont pas modifiées, tandis que les stations sont assignées à toutes les visées 
+  suivant la dernière visée de cheminement. Ceci peut avoir un impact sur la station 
+  des visées d'habillage qui suivent immédiatement le dernier cheminement, lorsque 
+  la politique d'assignation des stations est modifiée.</p>
+<p><br>
+  <strong>Stratégie de visée inverse (arrière)</strong><br>
+  À chaque station, on effectue la visée en arrière vers la station précédente, 
+  puis les visées d'habillage, et enfin la visée en avant vers la station suivante.<br>
+  Les visées arrière sont vérifiées : si une visée n'est pas proche de l'opposé 
+  de la visée de cheminement précédente, elle n'est pas considérée comme une visée 
+  arrière.<br>
+  Les visées inverses arrière sont marqués &quot;dupliquées&quot;.</p>
+<p><br>
+  <strong>Stratégie de visée au trépied</strong><br>
+  Au poste &quot;1&quot;, vous effectuez des visées d'habillage, puis des visées 
+  vers la station &quot;2&quot;. Ensuite, vous vous déplacez vers la station &quot;3&quot;, 
+  vous prenez des visées vers la station &quot;2&quot;, puis des visées d'habillage, 
+  puis des visées vers la station &quot;4&quot;. Passez à la station &quot;5&quot; 
+  et ainsi de suite.</p>
+<p><br>
+  <strong>Compensation des anomalies magnétiques</strong> [Niveau Testeur].<br>
+  La compensation de l'anomalie magnétique se fait en estimant à chaque station 
+  la déclinaison magnétique &quot;locale&quot; en comparant les azimuts de la 
+  visée qui atteint la station et de la visée inverse. Les azimuts de toutes les 
+  visées à la station sont ensuite corrigés avec la déclinaison &quot;locale&quot;. 
+  Une déclinaison globale demeure car la déclinaison à la première station ne 
+  peut être déterminée. De plus, les angles d'azimut du relevé deviennent relatifs 
+  comme dans une traversée, donc les erreurs d'angle s'additionnent au lieu de 
+  se compenser.<br>
+  La compensation des anomalies magnétiques nécessite de prendre des mesures en 
+  visée arrière. Cependant, avec la compensation des anomalies magnétiques, la 
+  vérification qu'une visée est une visée arrière ne prend pas en compte l'azimut. 
+  La compensation des anomalies magnétiques est effectuée pendant la compression 
+  des données (pour les croquis).</p>
+<p>&nbsp; </p>
 </body></html>

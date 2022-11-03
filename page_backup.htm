@@ -1,44 +1,52 @@
-<html><body>
-
-<h4>SKETCH RELOAD</h4>
-
-This window is opened by the <u>Reload</u> menu of the <u>sketch window</u>.<br><p>
-
-TopoDroid maintains backup copies of sketch files, from which the sketch can be recovered.<br>
-TopoDroid keeps a set of backup copies for each sketch file.
-These are named with suffixes "bck", "bck0", "bck1", and so on. They are stored in the 
-<i>tdr</i> subdirectory (binary sketch files). Whenever a sketch is saved the backup copies are rotated
-(eg, "bck1" is renamed "bck2", and so on; "bck" is renamed "bck0"),
-the old "tdr" file is renamed with suffix "bck", and the sketch is saved to a new "tdr" file.
-<br><p>
-
-A sketch is saved whenever it is closed, or you toggle between plan and profile view, or open a x-section,
-or switch to another sketch.
+<html>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+</HEAD>
+<body>
+<h4>RECHARGEMENT DE CROQUIS SAUVEGARDÉ</h4>
+Cette boite de dialogue est ouverte en appuyant sur <u>RECHARGER</u> dans le menu 
+déroulant<em> </em>de la<em> </em><a href="manual09.htm">Fenêtre de croquis</a>. 
 <br>
-It is also saved whenever it is modified (eg, a new item is added, or part of the sketch is erased)
-while it is open. Upon a modification a timer is started and when it expires the sketch is saved.
-The wait-time is a setting (default 60 seconds).
-<br>
-The number of backups is another setting.
-<br><p>
+<p> TopoDroid conserve des copies de sauvegarde des fichiers, à partir desquels 
+  les croquis peuvent être récupérés. <br>
+  L'appli conserve un ensemble de quatre copies de sauvegarde pour chaque fichier 
+  de croquis. Ces fichiers sont nommés avec des suffixes "bck", "bck0", "bck1", 
+  et "bck2" et sont stockés dans le <i></i> sous-répertoire TDR (Ticket Deposit 
+  Receipt) des fichiers binaires de croquis. Chaque fois qu'un croquis est enregistré 
+  les copies de sauvegarde font l'objet d'une incrémentation (par exemple, "bck1" 
+  est renommé "bck2", et ainsi de suite&#160;; "bck" est renommé "bck0"), l'ancien 
+  "TDR" est renommé avec le suffixe "bck", et le cvroquis est enregistré dans 
+  un nouveau fichier "TDR". <br>
 
-The <u>Sketch Backup</u> window displays a preview of the sketch backups.
-One backup at a time is displayed. Some info about the backup are shown in the title: 
+<p> Un croquis est enregistré chaque fois qu'il est fermé, que vous passez de 
+  la vue en plan à la vue en coupe, que vous ouvrez une section transverse ou 
+  que vous passez à un autre croquis. Il est aussi enregistré chaque fois qu'il 
+  est modifié (par exemple quand un nouvel élément est ajouté, ou qu'une partie 
+  du croquis est effacée) et lorsqu'il est ouvert. Lors d'une modification un 
+  délai d'attente est lancé et, lorsqu'il expire, le croquis est sauvegardé. Le 
+  temps d'attente est paramétrable (60 secondes par défaut). Le nombre de sauvegardes 
+  est un autre paramètre. 
+<p>La boîte de dialogue affiche la liste des sauvegardes de croquis. Une seule 
+  sauvegarde est affichée à la fois. Certaines informations sur la sauvegarde 
+  sont affichées dans le titre : 
 <ul>
-<li>how long ago it was written, with suffixes for minutes (m), hours (h), days (d), months (M) and years (Y)</li>
-<li>size of the file, in square brackets, in bytes</li>
-<li>backup number</li>
+  <li>le temps écoulé depuis son écriture, avec des suffixes pour les minutes 
+    (m), les heures (h), les jours (d), les mois (M) et les années (Y)</li>
+  <li>la taille du fichier, entre crochets, en octets</li>
+  <li>le numéro de sauvegarde</li>
 </ul>
-<br><p> 
-
-There are two buttons to move back and forth in the backup list.
-<br><p>
-
-The menus are
+<p>Il y a deux boutons pour se déplacer en avant et en arrière dans la liste des 
+  sauvegardes. 
+<p> Le menu est le suivant :
 <ul>
-<li><i>Close</i> the window without reloading the sketch from a backup</li>
-<li><i>Reload</i> the sketch from the displayed backup (and close the window)</li>
-<li><i>Help</i></li>
-</ul><br><p>
+  <li><strong>Fermer</strong> la fenêtre sans recharger le croqis à partir d'une 
+    sauvegarde.</li>
+  <li><strong>Recharger</strong> le croquis à partir de la sauvegarde affichée 
+    (et fermer la fenêtre).</li>
+  <li><strong>Aide</strong></li>
+</ul>
+<p><br>
+  <br>
+<p>
 
 </body></html>

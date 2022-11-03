@@ -1,41 +1,80 @@
-<html><body>
-
-<h4>AUTO-WALLS</h4>
-
-<div style="font-size=90%">
-At experimental level the <i>autowall</i> button is present in the shot edit dialog of the <u>sketch window</u>.<br><p>
-
-Auto-walls is a technique to quickly get a rough map of a simple cave, consisting only of the walls outline.
-It is not a substitute for a good sketch of the cave.
-<br><p>
-
-A better result can be obtained with the 3D model reconstruction, provided you have a dense set of splay points.
-Project the outline on the horizontal plane for the plan view, and slice a vertical profile curtain for the profile view.
-<br><p>
-
-With auto-walls you tell TopoDroid to draw walls to the right and left of a shots interpolating through the end-points of the splays. You must choose an auto-wall mechanism through the settings.
-At the moment there are two auto-wall algorithms: <i>convex</i> and <i>Delaunay</i>.<br><p>
-
-For the <i>convex</i> walls, a polyline is traced connecting the outermost end-points of the splays. To create a wall there must be at least one splay end-point on the side of the shot. In this case, two wall lines are traced, one on each side of the shot, if possible.<br><p>
-
-The <i>Delaunay</i> wall is based on a Delaunay triangulation of the splay endpoints (plus eight points "at infinity"), and the associated Voronoi cells. Each splay endpoint is associated to the farthest center of the cells it belongs to. From the cells at infinity a convex hull is build. This is then shrinked with the splay endpoints for which the associated center lies outside the hull. A single closed wall border is traced, usually containing the shot.<br><p>
-
-Auto-walls applies to one shot at a time, and it does not take into account the nearby shots. Therefore it is likely that an auto-wall "enters" the nearby piece of gallery or misses it. You should then edit the auto wall adjusting for these drawbacks, i.e., inserting points for the missing pieces and deleting, or moving, points that fall in the nearby gallery.<br><p>
-
-Through the settings you can specify the upper clino limit of the splays taken into account for walls in plan view, and the lower clino limit for profile view. Other settings let you pick the amount of allowed concavity, and the minimum distance [in m] between splay points on the wall.<br><p>
-
-<ul style="margin-top:0; margin-bottom:0">
-    <li><i>Walls type</i>: the type of auto-walls. Default is "none" (disabled).</li>
-    <li><i>Splay plan threshold</i>: maximum inclination of splays used in auto-walls in the plan view.</li>
-    <li><i>Splay profile threshold</i>: minimum inclination of splays used in auto-walls in the profile view.</li>
-    <li><i>Point separation</i>: minimum separation of splay points along the shot direction. If two splays are closer than this value only the splay with largest distance from the shot is used.</li>
-    <li><i>Point step</i>: maximum distance along the walls between two line-points. If a wall segment connecting two splays is too long it is splitted interpolating points in the between</li>
-    <li><i>Concavity</i>: amount of accepted wall concavity.</li>
-</ul><br><p>
-
-<i>Warning</i><br>
-If you draw auto-walls twice for the same shot you get two copies of the wall line(s).
-<br><p>
-</div>
-
+<html>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+</HEAD>
+<body>
+<h4>PAROIS AUTOMATISÉES</h4>
+<p>Au niveau exp&eacute;rimental, le bouton &quot;<em>Parois automatisées</em>&quot; 
+  est situé à gauche du bouton &quot;ENREGISTRER&quot; dans la bo&icirc;te de 
+  dialogue d<em>'</em><a href="page_shot_edit1.htm">&eacute;dition des propriétés 
+  de visée</a> accessible via<em> </em><a href="manual09.htm">la fenêtre de croquis.</a><br>
+  Il faut pour cela sélectionner une visée sur le croquis en appuyant sur le point 
+  milieu de celle-ci, un rond vert apparaît et vous pourrez alors appuyer sur 
+  l'icône bleue d'édition des &quot;<em>Propriétés</em>&quot;. <br>
+  <br>
+  Parois-auto est une technique pour obtenir rapidement une topographie approximative 
+  d'une cavité simple, compos&eacute;e uniquement des contours des parois. Ce 
+  n'est pas un substitut &agrave; un bon croquis personnel de la grotte.</p>
+<p><br>
+  Un meilleur r&eacute;sultat peut &ecirc;tre obtenu avec la reconstruction du 
+  mod&egrave;le 3D, &agrave; condition d'avoir un ensemble dense de points de 
+  visées latérales. Projetez le contour sur le plan horizontal pour la vue en 
+  plan et d&eacute;coupez un profil vertical pour la vue de coupe.</p>
+<p><br>
+  Avec les parois automatiques, vous indiquez &agrave; TopoDroid de dessiner des 
+  parois &agrave; droite et &agrave; gauche d'une visée en interpolant les points 
+  d'extr&eacute;mit&eacute; des visées latérales. Vous devez choisir un m&eacute;canisme 
+  de paroi automatique &agrave; travers les param&egrave;tres. &Agrave; l'heure 
+  actuelle, il existe deux algorithmes d'auto-paroi : <em>convexe</em> et <em>Delaunay</em>.</p>
+<p><br>
+  Pour les parois <em>convexes</em>, une polyligne est trac&eacute;e reliant les 
+  extr&eacute;mit&eacute;s les plus externes des visées latérales. Pour cr&eacute;er 
+  une paroi, il doit y avoir au moins un point de fin sur le c&ocirc;t&eacute; 
+  de la visée. Dans ce cas, deux lignes de mur sont trac&eacute;es, une de chaque 
+  c&ocirc;t&eacute; de la visée, si possible.</p>
+<p>La paroi de <em>Delaunay</em> est bas&eacute;e sur une triangulation de Delaunay 
+  des points finaux des visées latérales (plus des huiti&egrave;mes points &quot;&agrave; 
+  l'infini&quot;), et les cellules de Vorono&iuml; associ&eacute;es. Chaque extr&eacute;mit&eacute; 
+  est associ&eacute;e au centre le plus &eacute;loign&eacute; des cellules auxquelles 
+  elle appartient. À partir des cellules &agrave; l'infini, une coque convexe 
+  est construite. Ceci est ensuite r&eacute;duit avec les points finaux des visées 
+  latérales pour lesquels le centre associ&eacute; se trouve &agrave; l'ext&eacute;rieur 
+  de la coque. Une seule bordure de paroi ferm&eacute;e est trac&eacute;e, contenant 
+  g&eacute;n&eacute;ralement la visée.</p>
+<p><br>
+  Parois-auto s'applique &agrave; une seule visée &agrave; la fois, et il ne prend 
+  pas en compte les visées &agrave; proximit&eacute;. Par cons&eacute;quent, il 
+  est probable qu'une paroi automatique &quot;p&eacute;n&egrave;tre&quot; dans 
+  l'espace de la galerie voisine ou la rate. Vous devez ensuite modifier le r&eacute;glage 
+  automatique de la paroi pour palier à ces inconv&eacute;nients, c'est-&agrave;-dire 
+  ins&eacute;rer des points pour les espaces manquants et supprimer ou d&eacute;placer 
+  les points qui tombent dans la galerie voisine.</p>
+<p><br>
+  Gr&acirc;ce aux param&egrave;tres, vous pouvez sp&eacute;cifier la limite sup&eacute;rieure 
+  de pente des visées latérales d'habillage prise en compte pour les parois du 
+  plan et la limite inf&eacute;rieure de pente pour la coupe. D'autres param&egrave;tres 
+  vous permettent de choisir la quantit&eacute; de concavit&eacute; autoris&eacute;e 
+  et la distance minimale [en m] entre les points des visées latérales sur la 
+  paroi.</p>
+<p></p>
+<ul>
+  <li><em> Type de parois</em> : type de parois automatiques. La valeur par d&eacute;faut 
+    est &quot;none&quot; (d&eacute;sactiv&eacute;).</li>
+  <li><em>Seuil des visées d'habillage </em> plan : inclinaison maximale des visées 
+    utilis&eacute;es dans les parois automatiques sur un plan.</li>
+  <li><em>Seuil des visées d'habillage coupe </em>: inclinaison minimale des visées 
+    latérales utilis&eacute;es dans les parois automatiques sur une coupe.</li>
+  <li><em>S&eacute;paration de points</em> : s&eacute;paration minimale des visées 
+    latérales dans la direction de la visée. Si deux visées sont plus proches 
+    de cette valeur, seule la visée la plus grande est utilis&eacute;e.</li>
+  <li><em>Point</em> : distance maximale le long des parois entre deux lignes. 
+    Si un segment de paroi reliant deux visées latérales est trop long, il est 
+    divis&eacute; en deux par des points d'interpolation.</li>
+  <li><em>Concavit&eacute;</em> : quantit&eacute; de concavit&eacute; de paroi 
+    accept&eacute;e.</li>
+</ul>
+<p><br>
+  <em>Attention</em><br>
+  Si vous dessinez deux parois automatiques pour la même visée, vous obtiendrez 
+  deux copies de la même ligne de paroi.</p>
 </body></html>

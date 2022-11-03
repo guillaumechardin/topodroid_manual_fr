@@ -1,57 +1,131 @@
-<html><body>
-
-<h3>TopoDroid QUICK GUIDE</h3>
-
-This page covers the basics of TopoDroid. Refer to the user manual for more details.<br><p>
-
-<b>[1] Pair the device with Android</b><br>
-The device must be paired with the Android. This should be done also for bluetooth Low-Energy devices (Sap5, Bric4).
-Do that with the "Settings" app. Go to "network | bluetooth", turn the device on, and scan for devices. Your device should be found. Select it and enter the PIN "0000" (four zeros) to pair it with Android if asked to.
-If your device repeatedly asks the pin, set the socket to "insecure" in TopoDroid settings.<br><p>
-
-<b>[2] Select the device in TopoDroid</b><br>
-Start TopoDroid. To tell it to work with your device, tap the <i>Device</i> button. The name and address of your device should appear in the list. To select it tap its address, so that it appears in the top row.<br><p>
-
-<b>[3] Calibrate the device</b><br>
-If your device is not calibrated, you need to calibrate it. 
-For the DistoX this can be done with TopoDroid: refer to the user manual.<br>
-For the Sap5 and the Bric4 this is done by the device, without the app.<p>
-
-<b>[4] Create a new survey</b><br>
-Tap on the <i>plus</i> button in the <u>main window</u>, and enter the survey name and the surveyors in the dialog. Close the dialog tapping "Save".<br><p>
-
-<b>[5] Open the survey</b><br>
-Tapping the survey name in the list of the <u>main window</u>, takes you to the survey <u>data window</u>.<br>
-This step can be skipped if you press "Open" in step [4].<br><p>
-
-<b>[6] Take shots and download them</b><br>
-Take the survey shots: go to the first station, take the splay shots, them measure the leg at least three times.
-Move to the next station and repeat this procedure.<br>
-Tap the <i>download</i> button, the leftmost, in the survey <u>data window</u>. The download should start and the data appear in a list. Stations are automatically assigned. Make sure TopoDroid did not make any mistake. In case correct them by editing the shot.<br><p>
-
-<b>[7] Create a sketch</b><br>
-Each TopoDroid sketch consists of a plan view and an extended profile view.
-Tap on the the <i>sketch</i> button (the fourth), and tap on <i>new sketch</i>: enter the name of a station that serves as sketch origin in the second field. Tap <i>OK</i> to open the <u>sketch window</u> for the new sketch.<br><p>
-
-<b>[8] Draw the sketch</b><br>
-TopoDroid displays a canvas with a grid, the midline, the splays, and the stations. This is the plan view. Select the "draw" mode (leftmost button) and start drawing (lines). Switch off the "draw" mode tapping it again, and go to the profile view (sixth button). Draw the profile. Close the window and return to the shot list.<br><p>
-
-<b>[9] Complete the survey</b><br>
-Repeat from point [6], Take a couple more legs. At step [7] tap the sketch name to re-open it in the <u>sketch window</u>.<br><p>
-
-<b>[10] Make a ZIP backup</b><br>
-When you are done go to the survey <u>info window</u>, choose the <i>Export</i> menu, and select the <i>ZIP</i> format: this creates a zip archive of your survey.<br><p>
-
-<b>[11] Export the data</b><br>
-Then export the survey data in the format of your PC cave program. Open again the menu and tap <i>Export</i>.
-Pick your file-format. For some formats you can also choose some export options.<br><p>
-
-<b>[12] Export the sketch</b><br>
-Back to the <u>sketch window</u> open the menu (rightmost button) and select <i>Export</i>. Pick you favourite format, and tap <i>Save</i>. For <i>cSurvey</i> you need to export only the plan view. For other formats you must also export the profile view. You might need to export also the xsections.<br><p>
-
-<b>[13] Transfer exports</b><br>
-The exported files are in the <i>out</i> subfolder of the survey folder.
-Transfer them to the PC and finish your cave map.<br><p>
+<html> <HEAD> <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" /> </HEAD> <body>
+<h4>TOPODROID GUIDE RAPIDE</h4>
+<p align="center"><a href="manual15.htm">Revenir à l'Index </a></p>
+<p>Cette page r&eacute;sume les bases de TopoDroid. Reportez-vous au manuel de 
+  l'utilisateur pour plus de d&eacute;tails.</p>
+<p> <b>[1] Associer (appairer) le DistoX &agrave; Android</b><br>
+  Le DistoX doit &ecirc;tre associ&eacute; &agrave; Android. Faites-le avec l'application 
+  &quot;Param&egrave;tres&quot;. Allez sur &quot;r&eacute;seau | bluetooth&quot;, 
+  allumez le DistoX et recherchez les appareils. Votre DistoX devrait &ecirc;tre 
+  trouv&eacute;. S&eacute;lectionnez-le et entrez le code PIN &quot;0000&quot; 
+  (quatre z&eacute;ros).</p>
+<p><br>
+  <b>[2] S&eacute;lectionner le DistoX dans TopoDroid</b><br>
+  D&eacute;marrer TopoDroid. Pour lui dire de travailler avec votre DistoX, appuyez 
+  sur le bouton &quot;DistoX&quot; de la &quot;<a href="manual02.htm">Fenêtre 
+  principale</a>&quot;. L'adresse de votre DistoX devrait appara&icirc;tre dans 
+  la liste (ou <a href="page_device_name.htm">son alias</a> si vous en avez créé 
+  un). Tapez dessus, et la ligne du haut devrait afficher l'adresse.</p>
+<p><br>
+  <b>[3] Étalonner le DistoX</b><br>
+  Si le DistoX n'est pas calibr&eacute;, vous devez le calibrer (l'&eacute;talonner). 
+  Cela peut &ecirc;tre fait avec TopoDroid à partir de la &quot;<a href="manual03.htm">Fenêtre 
+  du périphérique</a>&quot; puis de la &quot;<a href="manual04.htm">Fenêtre d'étalonnage</a>&quot;. 
+  Pour plus de détails sur la procédure, reportez-vous au manuel d'utilisation 
+  de TopoDroid ou du DistoX.</p>
+<p><br>
+  <b>[4] Cr&eacute;er un nouveau relev&eacute; topographique</b><br>
+  Appuyez sur le bouton &laquo;plus&raquo; dans la &quot;<a href="manual02.htm">Fenêtre 
+  principale</a>&quot; et entrez un nom &agrave; votre relev&eacute; topo dans 
+  la bo&icirc;te de dialogue. Fermez la bo&icirc;te de dialogue en appuyant sur 
+  &quot;Enregistrer&quot;. Le nouveau nom de relevé apparaîtra alors en bas de 
+  la page s'il est le seul et unique. Au fur et à mesure que la liste se remplira, 
+  les noms y seront classés par ordre alphabétique.</p>
+<p><br>
+  <b>[5] Ouvrir le relev&eacute; topographique</b><br>
+  Tapez sur le nom du relev&eacute; topo dans la liste de la &quot;<a href="manual02.htm">Fenêtre 
+  principale</a>&quot; , et allez dans la &quot;<a href="manual06.htm">Fenêtre 
+  de données du relevé topographique</a>&quot; où l'on peut voir le &quot;<a href="manual07.htm">Tableau 
+  des visées</a>&quot;.<br>
+  Cette &eacute;tape peut &ecirc;tre ignor&eacute;e si vous appuyez sur &quot;Ouvrir&quot; 
+  &agrave; l'&eacute;tape [4].</p>
+<p><br>
+  <b>[6] Prendre des mesures (visées) et les t&eacute;l&eacute;charger</b><br>
+  Faites les mesures de la s&eacute;ance topo : placez-vous &agrave; la premi&egrave;re 
+  station et faites une mesure vers le second point topo, recommencez au moins 
+  trois fois la m&ecirc;me vis&eacute;e (pour que le programme enregistre automatiquement 
+  le passage à la station suivante). Déplacez-vous &agrave; la station suivante 
+  et r&eacute;p&eacute;tez cette proc&eacute;dure.<br>
+  Appuyez sur le bouton &quot;t&eacute;l&eacute;charger&quot;, le plus &agrave; 
+  gauche, dans la &quot;<a href="manual06.htm">Fenêtre de données du relevé topographique</a>&quot;. 
+  Le t&eacute;l&eacute;chargement doit commencer et les vis&eacute;es apparaissent 
+  dans une liste appelée &quot;<a href="manual07.htm">Tableau des visées</a>&quot;. 
+  Les num&eacute;ros de stations sont automatiquement attribu&eacute;s. Assurez-vous 
+  que TopoDroid n'a commis aucune erreur.<br>
+  NB : cette procédure ne concerne pas les prises de vues latérales d'habillage, 
+  mais uniquement le cheminement.<br>
+</p>
+<p><strong>[7] Modifier ou compléter une visée<br>
+  </strong>Depuis la &quot;<a href="manual06.htm">Fenêtre de données du relevé 
+  topographique</a>&quot;, choisir la visée voulue dans le &quot;<a href="manual07.htm">Tableau 
+  des visées</a>&quot;. Appuyer sur la ligne de cette visée pour ouvrir la &quot;<a href="page_shot_edit1.htm">Bo&icirc;te 
+  de dialogue d'Édition des vis&eacute;es</a>&quot;. Vous pouvez maintenant ajouter 
+  une note, modifier le sens de la visée et définir plusieurs autres caractéristiques. 
+  <br>
+</p>
+<p><strong>[8] Associer des notes audio et/ou des photos, voire supprimer une 
+  visée<br>
+  </strong>Depuis la &quot;<a href="manual06.htm">Fenêtre de données du relevé 
+  topographique</a>&quot;, choisir la visée voulue dans le &quot;<a href="manual07.htm">Tableau 
+  des visées</a>&quot;. Appuyer sur la ligne de cette visée pour ouvrir &quot;<a href="page_shot_edit1.htm">Bo&icirc;te 
+  de dialogue d'Édition des vis&eacute;es</a>&quot;. Appuyer sur le bouton &quot;Plus&quot; 
+  pour ouvrir la seconde &quot;<a href="page_shot_edit2.htm">Boîte de dialogue 
+  d'édition de visées (2)</a>&quot;. Vous pouvez maintenant prendre une photo 
+  ou faire un enregistrement mais aussi supprimer cette visée ou ajouter une visée 
+  d'habillage etc.</p>
+<p><br>
+  <b>[9] Cr&eacute;er un croquis (ou esquisse)</b><br>
+  Chaque croquis TopoDroid consiste en une vue en plan et une vue en coupe d&eacute;velopp&eacute;e. 
+  Dans la &quot;<a href="manual06.htm">Fenêtre de données du relevé topographique</a>&quot; 
+  tapez sur le bouton &quot;Croquis&quot; (le quatri&egrave;me), puis sur le bouton 
+  &quot;Nouveau Croquis&quot; : entrez le nom d'une station dans le deuxi&egrave;me 
+  champ (par exemple, 0). Appuyez sur &quot;OK&quot; pour ouvrir la &quot;<a href="manual09.htm">Fenêtre 
+  de croquis</a>&quot; (croquis ou dessin) et ainsi cr&eacute;er une nouvelle 
+  esquisse de topo.</p>
+<p><br>
+  <b>[10] Dessinez l'habillage de votre topo</b><br>
+  Sur la &quot;<a href="manual09.htm">Fenêtre de croquis (dessin)</a>&quot; TopoDroid 
+  affiche un quadrillage avec la ligne bris&eacute;e m&eacute;diane de cheminement, 
+  les sections (visées latérales) et les stations. C'est la vue en plan. S&eacute;lectionnez 
+  le mode &quot;Dessiner&quot; (bouton le plus &agrave; gauche) et commencez &agrave; 
+  dessiner (lignes) le contour de la galerie. D&eacute;sactivez le mode &quot;Dessiner&quot; 
+  en le tapotant &agrave; nouveau, et passez &agrave; l'affichage de la coupe 
+  (sixi&egrave;me bouton). Dessinez l'habillage de la coupe. Fermez la fen&ecirc;tre 
+  et revenez &agrave; la &quot;<a href="manual06.htm">Fenêtre de données du relevé 
+  topographique</a>&quot;.</p>
+<p><br>
+  <b>[11] Compl&eacute;ter le relev&eacute;</b><br>
+  Reprenez &agrave; partir du point [6], prenez quelques vis&eacute;es de plus. 
+  &Agrave; l'&eacute;tape [7], appuyez sur le nom de votre croquis pour le rouvrir 
+  dans la &quot;<a href="manual09.htm">Fenêtre de dessin</a>&quot; (croquis ou 
+  esquisse). </p>
+<p><br>
+  <b>[12] Exporter le croquis (dessin)</b><br>
+  Lorsque vous avez termin&eacute;, exportez votre travail de sorte que vous puissiez 
+  am&eacute;liorer la topographie de la grotte sur le PC. Dans la &quot;<a href="manual09.htm">Fenêtre 
+  de dessin</a>&quot; (croquis ou esquisse), ouvrez le menu (bouton le plus &agrave; 
+  droite) et s&eacute;lectionnez &quot;EXPORTER&quot;. Choisissez votre format 
+  pr&eacute;f&eacute;r&eacute;, et appuyez sur &quot;ENREGISTRER&quot;.</p>
+<p><br>
+  <b>[13] Exporter les donn&eacute;es</b><br>
+  Retournez &agrave; la &quot;<a href="manual06.htm">Fenêtre de données du relevé 
+  topographique</a>&quot;, ouvrez le menu et s&eacute;lectionnez &quot;INFO RELEV&Eacute;&quot;. 
+  Ensuite, ouvrez le menu de la fen&ecirc;tre &quot;<a href="manual08.htm">Info 
+  du relev&eacute; topographique</a>&quot; et s&eacute;lectionnez &quot;EXPORTER&quot;. 
+  Choisissez le format que vous pr&eacute;f&eacute;rez puis appuyez sur &quot;ENREGISTRER&quot;. 
+</p>
+<p><br>
+  <b>[14] Créer un fichier ZIP</b><br>
+  Recommencez l'exportation à partir de la fen&ecirc;tre &quot;<a href="manual08.htm">Info 
+  du relev&eacute; topographique</a>&quot; et s&eacute;lectionnez le format &quot;ZIP&quot; 
+  : ceci cr&eacute;e une archive .zip de votre s&eacute;ance de relev&eacute; 
+  topographique avec, entre autres, tous les fichiers que vous avez export&eacute;s 
+  jusqu'&agrave; pr&eacute;sent. Il sera stock&eacute; dans le dossier / sdcard 
+  / topodroid / zip. Transf&eacute;rez-le vers le PC et vous pourrez alors terminer 
+  votre topographie de la cavit&eacute; sur l'ordinateur &agrave; l'aide d'autres 
+  logiciels sp&eacute;cifiques.</p>
+<div align="center"><br>
+  <a href="manual15.htm">Revenir à l'Index </a> </div>
+<p>
 
 </body></html>
- 

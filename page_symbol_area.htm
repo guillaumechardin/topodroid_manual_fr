@@ -1,59 +1,72 @@
-<html><body>
-<h4>AREA TOOLS</h4>
-
-The "area" tools are defined in text files.<br><p>
-
-Two area tools, "user" and "water", are built in the programs.
-The others are loaded from the TopoDroid private folder <i>area</i>.
-This directory is populated with the area tools packaged in the distribution apk.
-You can delete the tools you do not need, edit the ones you want to change, and
-add new ones that are not provided in the apk.<br><p>
-
-The area tool file contains lines specifying the property of the drawing tool.
+<html>
+	<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+</HEAD>
+<body>
+<h4>OUTILS ZONES</h4>
+<p>Les outils &quot;zones&quot; sont d&eacute;finis dans des fichiers texte.</p>
+<p> Deux outils de zone, &quot;utilisateur&quot; et &quot;eau&quot;, sont intégrés 
+  dans le programme. Les autres sont chargés à partir du répertoire privé de TopoDroid. 
+  Ce r&eacute;pertoire contient les outils de points compil&eacute;s dans l'apk 
+  de distribution. Vous pouvez supprimer les outils dont vous n'avez pas besoin, 
+  modifier ceux que vous souhaitez modifier et en ajouter de nouveaux qui ne sont 
+  pas fournis dans l'apk.</p>
+<p><br>
+  Le fichier d'outil de zone contient des lignes sp&eacute;cifiant la propri&eacute;t&eacute; 
+  de l'outil de dessin.</p>
 <ul>
-<li>"symbol area" [mandatory]</li>
-<li>"name NAME", where NAME is the area default name [mandatory]</li>
-<li>translated names, eg, "name-es ..." [optional]</li>
-<li>"th_name NAME", where NAME is the Therion name. The filename must be the same as the Therion name, without the possible prefix "u": [mandatory]</li>
-<li>"color rgb alpha" (rgb and alpha in hex format, for example '0x0000ff' is blue, and '0x99' is semi-transparent) [mandatory]</li>
-<li>"close-horizontal" [optional, false if missing]</li>
-<li>"orientable" [optional, false if missing]</li>
-<li>"level" view_flag [optional, 1 if missing]</li>
-<li>"bitmap WIDTH HEIGHT X_TILE Y_TILE" starts of the bitmap pattern. The tile modes can be M (mirror) or R (repeat). This line must be followed by HEIGHT lines of length WIDTH with the bitmap pixels (1: foreground, 0: background).</li>
-<li>"endbitmap" marks the end of a bitmap</li>
-<li>"roundtrip VALUE" [optional, for SVG-roundtrip, VALUE can be 1 (walls_shp), 2 (walls_sym), 3 (detail_shp), 4 (detail_sym) - default 3]</li>
-<li>"endsymbol"</li>
+  <li>&quot;zone de symbole&quot; [obligatoire]</li>
+  <li>&quot;nom NAME&quot;, o&ugrave; NAME est le nom par d&eacute;faut de la 
+    zone [obligatoire]</li>
+  <li>noms traduits, par exemple, &quot;nom-es ...&quot; [facultatif]</li>
+  <li>&quot;th_name NAME&quot;, o&ugrave; NAME est le nom de <em>Therion</em>, 
+    et doit &ecirc;tre le m&ecirc;me que le nom de fichier [obligatoire]</li>
+  <li>&quot;couleur rgb alpha&quot; (rgb et alpha au format hexad&eacute;cimal) 
+    [obligatoire]</li>
+  <li>&quot;close-horizontal&quot; [facultatif, faux si manquant]</li>
+  <li>&quot;orientable&quot; [facultatif, faux si manquant]</li>
+  <li>&quot;bitmap WIDTH HEIGHT X_TILE Y_TILE&quot; d&eacute;marre le motif bitmap. 
+    Les modes mosa&iuml;que peuvent &ecirc;tre M (miroir) ou R (r&eacute;p&eacute;tition). 
+    Cette ligne doit &ecirc;tre suivie par des lignes HEIGHT de longueur WIDTH 
+    avec les pixels bitmap (1: premier plan, 0 : arri&egrave;re plan).</li>
+  <li>&quot;endbitmap&quot; marque la fin d'un bitmap</li>
+  <li>&quot;<em>cSurvey</em> LAYER CATEGORY PEN BRUSH&quot;</li>
+  <li>&quot;Endsymbol&quot;</li>
 </ul>
+<p><b>Nom<br>
+  </b>Reportez-vous à la page <a href="page_symbol_point.htm">outil points</a> 
+  pour savoir comment spécifier les noms. </p>
+<p><br>
+  <strong>Fermer-horizontal</strong><br>
+  Si cet attribut est défini, la bordure de zone est fermée horizontalement dans 
+  la vue en coupe et dans les sections transverses.<br>
+  Si la coordonnée Y du dernier point de la ligne tracée est proche de celle du 
+  premier alors le bord de la zone s'arrête au premier point dont la coordonnée 
+  Y est proche de celui-ci. Vous pouvez ainsi dessiner des zones avec un profil 
+  supérieur (ou inférieur) horizontal plat.<br>
+  Si les coordonnées Y des extrémités de la ligne tracée diffèrent trop, la bordure 
+  est fermée par un segment oblique.<br>
+</p>
+<p>Actuellement, cet attribut est seulement utilisé pour l'outil &quot;eau&quot; 
+  intégré.</p>
+<p><br>
+  <strong>Modèle bitmap</strong><br>
+  Avec cette option, vous pouvez spécifier un motif de fond, par exemple, pour 
+  différencier les formations rocheuses.</p>
+<p> Cet attribut n'est utilisé dans aucun des outils inclus dans l'apk.</p>
+<p><br>
+  <strong>Orientation</strong><br>
+  Si l'attribut &quot;orientable&quot; est défini, le motif de zone peut être 
+  pivoté dans la boîte de dialogue d'édition de zone.<br>
+  Les motifs de zone ne sont pas utilisés dans le jeu de symboles par défaut. 
+  L'ombrage est préféré pour améliorer la performance.</p>
+<br>
+<strong>Niveau</strong><br>
+L'attribut &quot;level&quot; prend la valeur du marqueur pour les vues activées 
+ici.<br>
+L'indicateur est un nombre dont la somme est 1 (niveau de base), 2 (plancher), 
+4 (remplissages), 8 (plafond) et 16 (artefacts). 
+<p>
 
-<b>Name</b><br>
-Refer to the <a href="page_symbol_point.htm">Point Tool</a> for how to specify the names.
-<br><p> 
-
-<b>Close-horizontal</b><br>
-If this attribute is set the area border is closed horizontally in the profile view
-and in the x-sections.<br>
-If the Y coordinate of the last point of the drawn line is close to that of the first point,
-the area border is interrupted at the first point that has Y coordinate close to that of the 
-first point.
-By this means you can draw areas with a flat horizontal top (or bottom) profile.<br>
-If the Y coordinates of the drawn line endpoints differ too much, the border is closed with a 
-slant segment.<br><p>
-
-Currently, this attribute it is only set for the built-in "water" tool.<br><p>
-
-<b>Bitmap pattern</b><br>
-With this option you can specify a background pattern, eg, for differentiating rock
-formations.<br><p>
-
-This attribute is not used in any tool packaged in the apk.<br><p>
-
-<b>Orientation</b><br>
-If the attribute "orientable" is set, the area pattern can be rotated through the area edit dialog.<br>
-Area patterns are not used in the default symbol set. Shading is preferred for performance.<br><p>
-
-<b>Level</b><br>
-The "level" attribute takes value the flag for the views enabled on this area items.<br>
-The flag is a number sum of 1 (base), 2 (floor), 4 (fills), 8 (ceiling), and 16 (artifacts).
-<br><p>
 
 </body></html>

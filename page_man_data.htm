@@ -1,58 +1,74 @@
-<html><body>
+	<html>
+	<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+</HEAD>
+	<body>
+<h3>SAISIE MANUELLE DES DONNÉES</h3>
 
-<h4>MANUAL DATA INPUT</h4>
+<p>Si vous n'avez pas d'appareil de mesure, il est toujours possible de saisir 
+  manuellement les données du relevé. Appuyez sur le bouton <em>Ajouter</em> pour 
+  ouvrir la <u>fenêtre de saisie des infos de visée</u>. Il est nécessaire de 
+  saisir les noms des stations (&quot;Depuis&quot; et &quot;Vers&quot;) et les 
+  données de la visée (longueur, azimut et pente). Le bouton &quot;<em>reverse</em>&quot; 
+  vous permet d'échanger les stations, c'est-à-dire d'inverser le sens de la visée.</p>
+<p> Si seuls les premiers champs sont remplis (les champs vers l'avant sont laissés 
+  vides), la mesure est insérée uniquement comme données rétrogrades.</p>
+<p> Pour ajouter une visée latérale d'habillage, entrez &quot;.&quot; (point) 
+  ou &quot;-&quot; (tiret) dans la station &quot;Vers&quot;. Des visées GDHB (LRUD) 
+  peuvent être ajoutées à une visée de cheminement en fournissant des infos de 
+  visées supplémentaires. Dans ce cas, les données GDHB sont reliées à la station 
+  &quot;Depuis&quot;.</p>
+<p>Il y a un avertissement si, lors de l'ajout d'une visée de cheminement, celle-ci 
+  diffère d'un autre visée de cheminement entre les mêmes stations de plus d'un 
+  quart de la longueur, ou de plus de 15°.</p>
+<p> Boutons : </p>
+<p align="left">Le bouton <u>ENREGISTRER</u> en bas de la fenêtre insère la visée 
+  dans le relevé et met à jour les noms des stations en les incrémentant afin 
+  que la boîte de dialogue soit prête à saisir la visée suivante. </p>
+<p>Le bouton <u>OK</u> insère la visée dans le relevé topo&nbsp; et ferme la boîte 
+  de dialogue.</p>
+<p><br>
+  <strong>Utiliser Android pour la direction</strong><br>
+  L'azimut et l'inclinaison peuvent être définis à l'aide des capteurs Android 
+  :<br>
+  Méthode 1 : <img src = "btn_compass.png" valign = "bottom"> Mesure l'azimut 
+  du côté long du périphérique de mesure Android (GPS du smartphone par exemple). 
+  Une minuterie (10 secondes par défaut) vous permet de pointer l'appareil avant 
+  la mesure.<br>
+  Méthode 2 : <img src = "btn_photo.png" valign = "bottom"> L'appareil photo Android 
+  s'ouvre. Regardez la station &quot;Vers&quot; sur l'écran et démarrez la minuterie 
+  lorsque la station apparait dans le viseur.<br>
+  Un avertissement est affiché si la précision du capteur est faible ou s'il y 
+  a une défaillance du capteur.</p>
+<p><br>
+  <b>Données GDHB (LRUD)</b><br>
+  Si les données GDHB sont spécifiées, les visées latérales d'habillage correspondantes 
+  sont également saisies. Il est aussi possible d'indiquer si elles se réfèrent 
+  à la station &quot;Depuis&quot; [par défaut] ou à la station &quot;Vers&quot;.</p>
+<p> Si la mesure de l'inclinaison de la visée est inférieure au seuil vertical 
+  défini dans les paramètres, les visées GDHB sont situées sur un plan vertical 
+  : H (Up) est vers le haut, B (Down) vers le bas, G (Left) horizontalement vers 
+  la gauche de la visée (c'est à dire avec l'azimut de la visée moins 90 degrés), 
+  et D (Right) horizontalement vers la droite de la visée.</p>
+<p> Si la mesure d'inclinaison de la visée est supérieure au seuil vertical défini, 
+  les visées GDHB sont situées sur un plan horizontal : G (Left) est à l'ouest, 
+  D (Right) est à l'est, H (Up) est au nord et B (Down) est au sud.</p>
+<p><br>
+  <b>Unités</b><br>
+  Les données doivent être entrées avec les unités actuelles. Par exemple, si 
+  les unités de longueur sont des «mètres», les distances doivent également être 
+  entrées dans «mètres».<br>
+</p>
+<p align="justify"><strong>Mode plongée</strong><br>
+  En mode plongée, les données des visées sont : la profondeur, l'azimut et la 
+  distance. L'azimut est supposé être pris avec un compas normal, la graduation 
+  augmentant dans le sens des aiguilles d'une montre. Les entrées d'azimut sont 
+  converties comme si elles étaient prises avec un compas de spéléologie (géologique). 
+  Par exemple, une entrée de 340° est convertie en 20° (les compas géologiques 
+  se distinguent par le sens inverse des aiguilles d'une montre des chiffres sur 
+  le cadran de la boussole). <br>
 
-If you do not have a bluetooth device you can still enter the shot data manually. 
-The <i>Add</i> button opens the dialog for the shot data input. 
-You must enter the station names and the shot data (length, azimuth, and clino).
-The <i>reverse</i> button swaps the stations, ie, reverse the shot.<br><p>
+<p>
 
-If only the backward fields are filled in (the forward fields are left empty)
-the shot is entered with the backward data.<br><p>
-
-To add a splay shot enter "." (period) or "-" (dash) in the TO station.
-LRUD can be added to a splay shot, thus providing additional splay shots.
-In this case the LRUD refer to the FROM station.<br><p>
-
-There is a warning if, upon editing a leg shot, it differs from another leg between the same stations more than one fourth in length, or 15&deg;.<br><p>
-
-Buttons:
-<ul>
-<li><b>Save</b> inserts the shot into the survey, and updates the station names incrementing them so that
-the dialog is ready to input the next shot</li>
-<li><b>OK</b> inserts the shot in the survey, and closes the dialog.</li>
-</ul><br><p>
-
-<b>Using Android for the direction</b><br>
-Azimuth and clino can be set using the Android sensors [G]:<br>
-<img src="btn_compass.png" > the reference axis is the direction of the long side of the device.
-A timer (10 s by default) lets you point the device before measuring.<br>
-<img src="btn_photo.png" > the reference axis is the normal to the display: 
-look at the TO station on the screen and start the timer when the station is in the
-middle of the cross-hair.<br>
-A warning is shown if the sensor accuracy is low or there is a sensor failure.<br><p>
-
-<b>LRUD</b><br>
-If LRUD are specified the respective splay shots are also inserted.
-Additionally you can select whether these refer to the FROM station (default) or to the TO station.<br><p>
-
-If the shot clino is smaller than the <i>v-threshold</i> setting, the LRUD are in a vertical plane:
-U is upwards, D downwards, L horizontal to the left of the shot (i.e., with azimuth that of the shot minus 90&deg;),
-and R horizontal to the right of the shot.<br><p>
-
-If the shot clino is greater than the <i>v-threshold</i> setting, the LRUD are in a horizontal plane:
-L is west, R is east, U is north, and D is south.<br><p>
-
-<b>Units</b><br>
-Data must be entered in the current units.
-For example if the length units are "feet", distances must be entered in "feet".<br><p>
-
-<div style="font-size=90%">
-<b>Diving mode</b><br>
-In diving mode the shot data are depth, azimuth, and distance.
-The azimuth is assumed taken with a normal compass, with graduation increasing clockwise.
-The azimuth entries are converted as if taken with a caving (geological) compass.
-For example an entry of 340&deg; is converted to 20&deg;.
-</div><br><p>
-
-</body></html>
+</body>
+</html>

@@ -1,23 +1,26 @@
 <html>
-<body>
+	<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
 
-<h4>SENSOR MEASUREMENT EDIT</h4>
 
-<div style="font-size=90%">
-This dialog is opened tapping a sensor measurement entry in the <i>Sensor list</i> dialog.<br><p>
-
-It displays some info about the measurement (title, type, shot, and value) and a field
-to change the sensor <b>comment</b>.<br><p>
-
-Buttons
+</HEAD>
+	<body>
+<h4>MODIFIER LES DONNÉES D'UN CAPTEUR ADDITIONNEL</h4>
+<p> Cette boîte de dialogue s'ouvre en appuyant sur une entrée de mesure de capteur 
+  dans la boîte de <u>dialogue Liste de capteurs. </u></p>
+<p align="justify">Elle affiche quelques informations sur la mesure (titre, type, 
+  visée et valeur) et un formulaire pour changer le <b>commentaire</b> du capteur.</p>
 <ul>
-<li><b>OK</b> saves the changes and closes the dialog</li>
-<li><b>Delete</b> deletes the measurement</li>
-</ul><br><p>
+  <li> <b>OK</b> enregistre les modifications et ferme la boîte de dialogue</li>
+  <li> <b>Supprimer</b> efface la mesure</li>
+</ul>
+<p align="justify"><strong>Supprimer</strong> ne détruit pas définitivement la 
+  mesure du capteur de la base de données, mais la marque comme &quot;supprimée&quot;. 
+  Elle peut être récupérée avec une application <em>SQLite</em>.</p>
+<h4><br>
+</h4>
 
-<b>Delete</b> does not remove the sensor measurement from the database, but marks it as "deleted".
-It can be recovered with a <i>SQLite</i> app.<br><p>
-</div>
+<p>
 
 </body>
 </html>

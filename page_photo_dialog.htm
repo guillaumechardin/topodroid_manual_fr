@@ -1,69 +1,72 @@
 <html>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+</HEAD>
 <body>
-
-<h4>SHOT/SKETCH PHOTO</h4>
-
-<div style="font-size=90%">
-This dialog is opened from the <i>Photo</i> button in the secondary <i>Shot edit</i> dialog, or when a "photo" point
-or a photo xsection are inserted
-in the <u>sketch window</u>.<br><p>
-
-There is a text field for the <b>comment</b> to the photo you are going to take,
-and a checkbox for the choice of the camera implementation.<br><p>
-
-Buttons:
+<h4>PHOTO VISÉE / CROQUIS</h4>
+<p>Cette boîte de dialogue s'ouvre à partir du bouton <em>Photo</em> de la <a href="page_shot_edit2.htm">seconde 
+  boîte de dialogue d'édition des visées</a>, ou lorsqu'un point &quot;photo&quot; 
+  ou une photo de section transverse sont insérés dans la <a href="manual09.htm">fenêtre 
+  de croquis</a>. </p>
+<p>Il y a un champ de texte pour le commentaire de la photo que vous allez prendre, 
+  et une case à cocher pour le choix de l'implémentation de l'appareil photo.</p>
+<p><br>
+  Boutons : </p>
 <ul>
-<li><b>OK</b> closes the dialog and starts to take a photo.</li>
-<li><b>Cancel</b> closes the dialog.</li>
-</ul><br><p>
-
-TopoDroid contains a simple implementation of a camera. 
-Its unique feature is that it stores the azimuth and inclination of the device in exif tags in the image file. 
-The azimuth is stored as GPS_LONGITUDE and the inclination as GPS_LATITUDE (with sign).
-<br>
-The following exif tags are set by TopoDroid:
-<ul>
-<li><i>Software</i>: "TopoDroid" and its version, separated by a space [Android 7 and up]</li>
-<li><i>Orientation</i></li>
-<li><i>Datatime</i> [yyyy.MM.dd]</li>
-<li><i>GPS latitude</i>: inclination [1/100&deg;]</li>
-<li><i>GPS latitude ref</i>: "N" or "S"</li>
-<li><i>GPS longitude</i>: azimuth [1/100&deg;]</li>
-<li><i>GPS longitude ref</i>: "E"</li>
-<li><i>Image description</i>: azimuth and inclination in 1/100&deg;, separated by a space</li>
+  <li><strong>OK</strong> ferme la boîte de dialogue et commence à prendre une 
+    photo.</li>
+  <li><strong>Annuler</strong> ferme la boîte de dialogue.</li>
 </ul>
+<p><br>
+  TopoDroid contient une implémentation simple d'un appareil photo. Sa caractéristique 
+  unique est qu'il stocke l'azimut et l'inclinaison de l'appareil dans les balises 
+  exif du fichier image. L'azimut est stocké en tant que GPS_LONGITUDE et l'inclinaison 
+  en tant que GPS_LATITUDE (avec signe). <br>
+  Les balises exif suivantes sont définies par TopoDroid : </p>
+<ul>
+  <li><em>Logiciel</em> : &quot;TopoDroid&quot; et sa version, séparés par un 
+    espace [Android 7 et plus].</li>
+  <li><em>Orientation</em></li>
+  <li><em>Date et heure</em> [aaaa.MM.jj]</li>
+  <li><em>Latitude</em> GPS : inclinaison [1/100°].</li>
+  <li><em>Réf. de la latitude</em> GPS : &quot;N&quot; ou &quot;S&quot;.</li>
+  <li><em>Longitude</em> GPS : azimut [1/100°]</li>
+  <li><em>Réf. de longitude</em> GPS : &quot;E&quot;.</li>
+  <li><em>Description de l'image</em> : azimut et inclinaison au 1/100°, séparés 
+    par un espace.</li>
+</ul>
+<p></p>
+<p> Pour le point &quot;photo&quot; ou la photo de section transverse, l'affichage 
+  de l'appareil photo de TopoDroid comporte un réticule centré superposé.</p>
+<p><br>
+  TopoDroid utilise les capteurs Android pour obtenir la direction (azimut et 
+  pente). Un avertissement s'affiche si la précision du capteur est faible ou 
+  s'il y a une défaillance du capteur.</p>
+<p> L'appareil photo de TopoDroid comporte trois boutons en bas à droite. </p>
+<ul>
+  <li><strong>appareil photo</strong>. Rouge : prêt, appuyez pour prendre une 
+    photo. Bleu : en attente, appuyez pour activer l'appareil photo.</li>
+  <li><strong>Enregistrer</strong> : enregistre la photo. Grisé jusqu'à ce qu'une 
+    photo ait été prise.</li>
+  <li><strong>Retour</strong> ferme la fenêtre sans enregistrer la photo.</li>
+</ul>
+<p></p>
+<p>Lorsque l'écran est tourné vers le haut, la photo est en format portrait. Lorsque 
+  l'écran est tourné vers la gauche ou la droite, l'image est en mode paysage.<br>
+  Les boutons de zoom s'affichent en tapant sur l'écran en bas et au milieu. Pour 
+  passer d'une niveau de zoom à l'autre appuyez rapidement sur les boutons de 
+  zoom à plusieurs reprises.</p>
+<p><br>
+  <strong>Implémentation de l'appareil photo</strong><br>
+  TopoDroid dispose de deux implémentations d'appareil photo : la première utilise 
+  l'ancienne API d'appareil photo Android, la seconde utilise la nouvelle API 
+  d'appareil photo Android2.<br>
+  L'ancienne caméra est utilisée par défaut.</p>
+<p><br>
+  Avec la nouvelle API camera2, il y a une limite de cinq tentatives de capture 
+  d'image, après quoi le bouton de l'appareil photo n'est plus disponible.</p>
+<p><br>
+  Un avertissement s'affiche si l'enregistrement de l'image JPEG échoue.</p>
 <br><p>
 
-For "photo" point or photo xsection the display of the TopoDroid camera has a centered overlaid cross-hair.<br><p>
-
-TopoDroid uses Android sensors to get the direction (azimuth and clino). 
-A warning is displayed if the sensor accuracy is low or there is a sensor failure.<br><p>
-
-The TopoDroid camera has three buttons on the lower right.
-<ul>
-<li><b>camera</b>. Red: ready, tap to take a picture. Blue: on hold, tap to turn camera active.</li>
-<li><b>save</b> saves the picture. Grayed until a picture has been taken.</li>
-<li><b>back</b> closes the window without saving the picture.</li>
-</ul>
-
-With the screen up the picture is portrait.
-When the screen is turned to the left or to the right the picture is landscape.<br><p>
-
-Zoom buttons are brought up by tapping the screen in the mid-bottom.
-To go through large zoom steps tap the zoom buttons repeatedly fast.<br><p>
-
-<b>Camera implementation</b><br>
-TopoDroid has two camera implementations: the first uses the old Android camera API,
-the second uses the new Android camera2 API.<br>
-The default is the old camera.<br><p>
-
-With the new camera2 API there is a limit of five attempts of picture capture,
-after which the <i>camera</i> button is no longer available.<br><p>
-
-A warning is displayed, if the JPEG image saving fails.<br><p> 
-
-</div><br><p>
-
-</body>
-</html>
-
+</body></html>
